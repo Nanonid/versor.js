@@ -1,7 +1,7 @@
 var STA = versor.create({
         metric:[1,-1,-1,-1],
         types:[
-                {name:"Sca", bases:["s"]}
+                {name:"Sca", bases:["s"]},
                 {name:"GMV", bases:["s","e1","e2","e3","e4","e12","e13","e14","e23","e24","e34","e123","e124","e134","e234","e1234"]
         ]
 });
