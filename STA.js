@@ -6,10 +6,10 @@ var STA = versor.create({
         ]
 });
 STA.recipbasis = function(a) {
-        var b=STA.GMV(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0).add(a);
+        var b=STA.GMV(a);
         var g=STA.GMV(1,1,-1,-1,-1,-1,-1,-1,1,1,1,1,1,1,-1,-1);
         for (var i=0; i<16; i++) b[i]*=g[i];
-        return b.cast(a);
+        return b;
 }
 STA.mag = function(a) { return sqrt(STA.mag2(a)); }
 STA.mag2 = function(a) { return a.ip(STA.recipbasis(a.reverse()))[0]; }
