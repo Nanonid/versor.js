@@ -5,6 +5,10 @@ var STA = versor.create({
                 {name:"GMV", bases:["s","e1","e2","e3","e4","e12","e13","e14","e23","e24","e34","e123","e124","e134","e234","e1234"]},
         ]
 });
+STA.tovec = function(a) {
+        var b=STA.E3(a);
+        return vec(b[0],b[1],b[2]);
+}
 STA.recipbasis = function(a) {
         var b=STA.GMV(a);
         var g=STA.GMV(1,1,-1,-1,-1,-1,-1,-1,1,1,1,1,1,1,-1,-1);
