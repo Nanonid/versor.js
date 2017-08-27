@@ -14,14 +14,13 @@
     )
     (block $label$0
       (br_if $label$0
-        (i32.eq
+        (i32.eqz
           (tee_local $3
             (i32.shr_u
               (get_local $0)
               (i32.const 1)
             )
           )
-          (i32.const 1)
         )
       )
       (set_local $4
@@ -75,14 +74,11 @@
           )
         )
         (br_if $label$1
-          (i32.ne
-            (tee_local $3
-              (i32.shr_u
-                (get_local $3)
-                (i32.const 1)
-              )
+          (tee_local $3
+            (i32.shr_u
+              (get_local $3)
+              (i32.const 1)
             )
-            (i32.const 1)
           )
         )
       )

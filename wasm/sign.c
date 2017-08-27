@@ -4,7 +4,7 @@ int grade(integer b);
 int sign(integer a, integer b) {
   integer n = a >> 1;
   int sum = 0;
-  while (n != 1) {
+  while (n != 0) {
     sum += grade(n & b);
     n >>= 1;
   }
